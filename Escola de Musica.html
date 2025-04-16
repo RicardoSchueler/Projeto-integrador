@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Hotel Street</title> 
+        <div class="container"> 
+            <div class="row"> 
+                <div style="background-color: white;" class="col-md-3" > 
+                    <img src="imagens/Logotipo.jpg" width="70" height="70" class="text-center"> 
+                </div> 
+                <div style="background-color: white;" class="col-md-9"> 
+                    <br/>
+                    <ul class="nav"> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Escola de Musica.html">Página Inicial</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Cadastro.html">Cadastro</a>  
+                        </li>                         
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Pagamentos.html">Pagamentos</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Aulas.html">Aulas</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Financeiro.html">Financeiro</a> 
+                        </li>                         
+                      </ul>  
+                </div> 
+            </div> 
+        </div> 
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    </head> 
+    <body> 
+        <div class="container"> 
+            <div id="linha-destaques" class="text-center"> 
+                <div>   
+                    <br/>
+                    <img src="imagens/Instrumentos.jpg" style="max-width:100%; height:auto">  
+                    <br/><br/>  
+                    <h5>Espaço Cultural Tocando em Você</h5> 
+                    <p class="fw-light">40 anos de experiência, tradição e excelência no ensino musical !</p> 
+                </div> 
+            </div>
+        </div>  
+        <br/>
+        <div class="container">          
+            <div id="linha-destaques" class="row">
+                <div class="col-sm-4"></div>  
+                <div class="col-sm-4  border border-success p-2 border-opacity-50 rounded">  
+                    <div class="text-center"><h4>Controle de acesso</h4></div>
+                    <br/>                    
+                    <form id="formAcesso" method="post" action="">                      
+                        <div class="row row-cols-2"> 
+                            <div class="col">
+                                <label for="nome" class="form-label">Login:</label> 
+                                <input id="nome" class="form-control" type="text" name="login" required>   
+                            </div>                         
+                            <div class="col">                               
+                                <label for="senha" class="form-label">Senha:</label> 
+                                <input id="senha" class="form-control" type="password" name="senha" required> 
+                            </div>
+                        </div>   
+                        <br/>
+                        <div class="text-center">
+                            <input type="submit" class="btn btn-primary" value="Login"> 
+                        </div>
+                    </form>                   
+                </div> 
+                <div class="col-sm-4"></div>
+            </div>
+        </div> 
+        <br/>                 
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script> 
+    </body> 
+</html> 

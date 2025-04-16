@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Hotel Street</title> 
+        <div class="container"> 
+            <div class="row"> 
+                <div style="background-color: white;" class="col-md-3" > 
+                    <img src="imagens/Logotipo.jpg" width="70" height="70" class="text-center"> 
+                </div> 
+                <div style="background-color: white;" class="col-md-9"> 
+                    <br/>
+                    <ul class="nav"> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Escola de Musica.html">Página Inicial</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Cadastro.html">Cadastro</a> 
+                        </li>                         
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Pagamentos.html">Pagamentos</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Aulas.html">Aulas</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Financeiro.html">Financeiro</a> 
+                        </li>                         
+                      </ul>  
+                </div> 
+            </div> 
+        </div> 
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    </head> 
+    <body>  
+        
+        <div class="container">    
+            
+            <div id="linha-titulo" class="row"> 
+                <div class="text-center"> 
+                    <br/> 
+                    <h3>Controle de Pagamento das Mensalidades</h3> 
+                </div> 
+            </div> 
+
+            <div id="linha-destaques" class="row">
+
+                <div class="col-sm-3"></div>  
+
+                <div class="col-sm-6 border border-success p-2 border-opacity-50 rounded">  
+     
+                    <form id="frmPagamento" method="post" action="">                      
+                          
+                        <br/>
+
+                        <div class="col-sm-4">
+                            <strong><label for="aluno" class="form-label">Aluno:</label></strong>
+                        </div>
+                        <div class="col-sm-8">                            
+                            <select class="form-select" aria-label="Default select example" id="aluno" aria-readonly="true">
+                                <option selected>Selecione um aluno</option>                                
+                                <option value="1">André Santos</option>
+                                <option value="2">Maria da Silva Carmo</option>
+                                <option value="3">Alexandre Camilo</option>
+                                <option value="4">Deuza Sampaio</option>
+                                <option value="5">Gilberto Cardoso Matias</option>
+                            </select>                                 
+                        </div>   
+                        
+                        <br/>
+
+                        <div class="col-sm-4">
+                            <strong><label for="curso" class="form-label">Curso:</label></strong>
+                        </div>
+                        <div class="col-sm-8">                            
+                            <select class="form-select" aria-label="Default select example" id="curso" aria-readonly="true">
+                                <option selected>Selecione um curso</option>                                
+                                <option value="1">Violão</option>
+                                <option value="2">Guitarra</option>
+                                <option value="3">Baixo</option>
+                                <option value="4">Piano</option>
+                                <option value="5">Canto</option>
+                                <option value="6">Violino</option>
+                                <option value="7">Bateria</option>
+                                <option value="8">Flauta transversal</option>
+                                <option value="9">Musicalização infantil</option>
+                            </select>                                 
+                        </div>                 
+
+                        <br/>
+
+                        <div class="col-sm-8">
+                            <strong><label for="mes" class="form-label">Mês:</label></strong>
+                        </div>
+                        <div class="col-sm-4">                            
+                            <select class="form-select" aria-label="Default select example" id="mes" aria-readonly="true">
+                                <option selected>Selecione um mês</option>                                
+                                <option value="1">Janeiro</option>
+                                <option value="2">Fevereiro</option>
+                                <option value="3">Março</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Maio</option>
+                                <option value="6">Junho</option>
+                                <option value="7">Julho</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Setembro</option>
+                                <option value="10">Outubro</option>
+                                <option value="11">Novembro</option>
+                                <option value="12">Dezembro</option>
+                            </select>                                 
+                        </div>            
+
+                        <br/>
+
+                        <div class="col-sm-9">
+                            <strong><label for="ano" class="form-label">Ano:</label></strong>
+                        </div>
+                        <div class="col-sm-3">                            
+                            <select class="form-select" aria-label="Default select example" id="ano" aria-readonly="true" name="ano">
+                                <option selected>Selecione um ano</option>                                
+                                <option value="1">2023</option>
+                                <option value="2">2024</option>
+                                <option value="3">2025</option>
+                            </select>                                 
+                        </div>            
+                        
+                        <br/>
+
+                        <div class="col-sm-7">
+                            <strong><label for="valor" class="form-label">Valor:</label></strong>
+                        </div>
+                        <div class="col-sm-5">
+                            <input id="valor" class="form-control" type="valor" name="valor" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"> 
+                        </div>
+
+                        <br/> 
+
+                        <div class="col-sm-1">
+                            <strong><label for="observacao" class="form-label">Observação:</label></strong>
+                        </div>
+                        <div class="col-sm-11">                                
+                            <textarea class="form-control" id="observacao" rows="3" name="observacao"></textarea>
+                        </div>
+
+                        <br/>
+ 
+                        <div class="row row-cols-4">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3"><input type="submit" class="btn btn-primary" value="Gravar"></div>
+                            <div class="col-sm-3"><input type="submit" class="btn btn-primary" value="Apagar"></div>
+                            <div class="col-sm-3"></div>
+                        </div>
+
+                    </form>                   
+
+                </div> 
+
+                <div class="col-sm-3"></div>
+
+            </div>
+
+        </div> 
+
+        <br/>       
+
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script> 
+        <script src="validar.js"></script>
+
+    </body> 
+</html> 

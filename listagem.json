@@ -1,0 +1,52 @@
+{
+  "listagem": [
+    {
+      "tipo": "Aluno",
+      "nome": "Ricardo Schueler",
+      "cpf": "601.461.543-22",
+      "identidade": "08622797-2",
+      "uf_id": "RJ",
+      "email": "ricardo.schueler@gmail.com",
+      "dt_nascimento": "1969-04-21",
+      "endereco": "Rua Moraes e Silva 45, Centro",
+      "telefones": "(21) 98432-7321",
+      "id": 1
+    },
+    {
+      "tipo": "Aluno",
+      "nome": "Gilmara Ponce de Schueler ",
+      "cpf": "018.810.107-16",
+      "identidade": "3242343",
+      "uf_id": "RJ",
+      "email": "gilmara.schueler@gmail.com",
+      "dt_nascimento": "1971-05-02",
+      "endereco": "Rua Paulo Matos 45, Centro",
+      "telefones": "(21) 98873-8123",
+      "id": 2
+    },
+    {
+      "tipo": "Professor",
+      "nome": "Ernesto Santos",
+      "cpf": "013.567.123-16",
+      "identidade": "324084231",
+      "uf_id": "RJ",
+      "email": "ernesto.santos@gmail.com",
+      "dt_nascimento": "1974-06-12",
+      "endereco": "Rua Pres. João Pessoa 45, Centro",
+      "telefones": "(21) 98873-8123",
+      "id": 3
+    },
+    {
+      "tipo": "Aluno",
+      "nome": "Vinicius Ponce de Schueler",
+      "cpf": "179.264.257-10",
+      "identidade": "3242343",
+      "uf_id": "RJ",
+      "email": "vini.ponce@hotmail.com",
+      "dt_nascimento": "2025-04-02",
+      "endereco": "Rua Faisão Chiquito 45, Centro",
+      "telefones": "(21) 96873-9923",
+      "id": 4
+    }
+  ]
+}

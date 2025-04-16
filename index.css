@@ -1,0 +1,33 @@
+h5
+{
+   font-family: 'Georgia', serif;
+   font-size: 24px;
+   color: #474242;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   font-weight: bold;
+   text-align: center;
+}
+
+.fonte-menor
+{
+   font-size: 8px;
+   font-weight: bold;
+}
+
+.botao 
+ {
+  border-radius: 12px; /* Cantos arredondados */  
+  text-align: center;  
+  font-weight: bold;
+  width: 120px;
+  height: 30px;
+ }
+
+ #msg_valor
+ {
+   display: none;
+   font-size: 13px;
+   color: red; 
+ }
+
+ 

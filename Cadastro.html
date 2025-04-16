@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Hotel Street</title> 
+        <div class="container"> 
+            <div class="row"> 
+                <div style="background-color: white;" class="col-md-3" > 
+                    <img src="imagens/Logotipo.jpg" width="70" height="70" class="text-center"> 
+                </div> 
+                <div style="background-color: white;" class="col-md-9"> 
+                    <br/>
+                    <ul class="nav"> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Escola de Musica.html">Página Inicial</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Cadastro.html">Cadastro</a> 
+                        </li>                         
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Pagamentos.html">Pagamentos</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Aulas.html">Aulas</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="Financeiro.html">Financeiro</a> 
+                        </li>                         
+                      </ul>  
+                </div> 
+            </div> 
+        </div> 
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    </head> 
+    <body>  
+        
+        <div class="container">    
+            
+            <div id="linha-titulo" class="row"> 
+                <div class="text-center"> 
+                    <br/> 
+                    <h3>Cadastro</h3> 
+                </div> 
+            </div> 
+
+            <div id="linha-destaques" class="row">
+
+                <div class="col-sm-3"></div>  
+
+                <div class="col-sm-6 border border-success p-2 border-opacity-50 rounded">  
+     
+                    <form id="frmCadastro" method="post" action="">                      
+                         
+                        <div class="row"> 
+                            <div class="col-sm-3">
+                                <strong><label for="tipo" class="form-label">Tipo:</label></strong>
+                            </div>
+                            <div class="col-sm-9">
+
+                                <div class="form-check"> 
+                                    <input class="form-check-input" type="radio" name="tipo" id="rbAluno" value="Aluno" checked> 
+                                    <label class="form-check-label" for="rbAluno">Aluno</label>  
+                                </div>  
+    
+                                <div class="form-check">                        
+                                    <input class="form-check-input" type="radio" name="tipo" id="rbProfessor" value="Professor"> 
+                                    <label class="form-check-label" for="rbProfessor">Professor</label> 
+                                </div>
+    
+                                <div class="form-check">                        
+                                    <input class="form-check-input" type="radio" name="tipo" id="rbFuncionario" value="Funcionário"> 
+                                    <label class="form-check-label" for="rbFuncionario">Funcionário</label> 
+                                </div>  
+
+                            </div> 
+                        </div>                          
+
+                        <br/>
+
+                        <div class="col-sm-2">                    
+                            <strong><label for="nome" class="form-label">Nome:</label></strong> 
+                        </div>  
+                        <div class="col-sm-10">   
+                            <input id="nome" class="form-control" type="text" name="nome">
+                        </div>  
+
+                        <br/>
+
+                        <div class="col-sm-3">
+                            <strong><label for="cpf" class="form-label">CPF:</label></strong>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="col-sm-5"><input id="cpf" class="form-control" type="text" name="cpf"></div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                        
+                        <br/>
+
+                        <div class="row row-cols-2">
+                            <div class="col-sm-8">
+                                <div class="col-sm-4"><strong><label for="identidade" class="form-label">Identidade:</label></strong></div>                                                                
+                                <div class="col-sm-8"><input id="identidade" class="form-control" type="text" name="identidade"></div>                                                                
+                                <br/>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="col-sm-4">
+                                    <strong><label for="uf_id" class="form-label">UF:</label></strong>
+                                </div>
+                                <div class="col-sm-8">                                    
+                                    <select class="form-select" aria-label="Default select example" id="uf_id" name="uf_id">
+                                        <option selected>RJ</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="SP">SP</option>
+                                        <option value="MG">MG</option>
+                                        <option value="ES">ES</option>
+                                    </select>                                 
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/>
+
+                        <div class="col-sm-3">
+                            <strong><label for="email" class="form-label">E-mail:</label></strong>
+                        </div>
+                        <div class="col-sm-9">
+                            <input id="email" class="form-control" type="email" name="email" placeholder="name@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"> 
+                        </div>
+
+                        <br/>
+
+                        <div class="col-sm-3">
+                            <strong><label for="dt_nascimento" class="form-label">Dt. nascimento:</label></strong>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="col-sm-5"><input id="dt_nascimento" class="form-control" type="date" name="dt_nascimento" maxlength="10"></div>
+                            <div class="col-sm-4"></div>                                   
+                        </div>
+
+                        <br/>
+
+                        <div class="col-sm-1">
+                            <strong><label for="endereco" class="form-label">Endereço:</label></strong>
+                        </div>
+                        <div class="col-sm-11">                                
+                            <textarea class="form-control" id="endereco" rows="3" name="endereco"></textarea>
+                        </div>
+
+                        <br/>
+
+                        <div class="col-sm-2">
+                            <strong><label for="telefones" class="form-label">Telefones:</label></strong>
+                        </div>
+                        <div class="col-sm-10">
+                            <input id="telefones" class="form-control" type="text" name="telefones"> 
+                        </div>
+
+                        <br/>
+
+                        <div class="row row-cols-4">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-2"><input type="submit" class="btn btn-primary" value="Gravar"></div>
+                            <div class="col-sm-2"><input type="reset" class="btn btn-primary" value="Apagar"></div>                            
+                            <div class="col-sm-2"><a href="listagem.html" class="btn btn-primary">Listagem</a></div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                        <br/><br/>
+                        <div id="result"></div>
+                        <script src="listagem.js"></script>      
+                    </form>                   
+
+                </div> 
+
+                <div class="col-sm-3"></div>
+
+            </div>
+
+        </div> 
+
+        <br/>       
+
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script> 
+        <script src="validar.js"></script>
+
+        <script>
+            $(document).ready(function () 
+            { 
+                $('#cpf').mask('000.000.000-00')    
+            });
+        </script>
+
+    </body> 
+</html> 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Street</title> 
+    <div class="container"> 
+        <div class="row"> 
+            <div style="background-color: white;" class="col-md-3" > 
+                <img src="imagens/Logotipo.jpg" width="70" height="70" class="text-center"> 
+            </div> 
+            <div style="background-color: white;" class="col-md-9"> 
+                <br/>
+                <ul class="nav"> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="Escola de Musica.html">Página Inicial</a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="Cadastro.html">Cadastro</a> 
+                    </li>                         
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="Pagamentos.html">Pagamentos</a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="Aulas.html">Aulas</a> 
+                    </li> 
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="Financeiro.html">Financeiro</a> 
+                    </li>                         
+                  </ul>  
+            </div> 
+        </div> 
+    </div> 
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+</head>
+<body>
+
+    <br/>
+    <div class="text-center"> 
+        <h3>Lista de Cadastramentos Realizados</h3> 
+    </div>   
+    <br/>  
+
+    <table id="jsonTable" style="width:100%" border-collapse="collapse" class="table-responsive table table-striped">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Nome</th> 
+                <th>CPF</th> 
+                <th>Identidade</th>
+                <th>UF</th>
+                <th>E-mail</th> 
+                <th>Dt. Nascimento</th>
+                <th>Endereço</th>
+                <th>Telefones</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function()
+        {            
+            var tableBody = $('#jsonTable tbody');
+
+            $.get("http://localhost:3000/listagem", function(data, status)
+            {
+                for (i = 0; i < data.length; i++) 
+                {                  
+                    var row = $('<tr>');
+                    row.append($('<td>').text(data[i].tipo));
+                    row.append($('</td>'));    
+                    row.append($('<td>').text(data[i].nome));
+                    row.append($('</td>'));
+                    row.append($('<td>').text(data[i].cpf));
+                    row.append($('</td>'));    
+                    row.append($('<td>').text(data[i].identidade));
+                    row.append($('</td>'));    
+                    row.append($('<td>').text(data[i].uf_id));
+                    row.append($('</td>')); 
+                    row.append($('<td>').text(data[i].email));
+                    row.append($('</td>'));    
+                    row.append($('<td>').text(data[i].dt_nascimento));
+                    row.append($('</td>'));   
+                    row.append($('<td>').text(data[i].endereco));
+                    row.append($('</td>'));    
+                    row.append($('<td>').text(data[i].telefones));
+                    row.append($('</td>'));
+                    row.append($('<td>').text(data[i].id));
+                    row.append($('</td>'));                                           
+                    row.append($('</tr>'));
+                    tableBody.append(row);
+                }
+            });  
+         });
+    </script>
+
+</body>
+</html>
